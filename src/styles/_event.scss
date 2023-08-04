@@ -1,0 +1,78 @@
+@use "variables";
+
+.event {
+  padding: 80px 0;
+
+  &--twd {
+    background-image: linear-gradient(variables.$back1, variables.$back2);
+  }
+
+  &--silverchair {
+    background-image: linear-gradient(variables.$back2, variables.$back1);
+  }
+
+  &--oficina-g3 {
+    background-image: linear-gradient(variables.$back1, variables.$back2);
+  }
+
+  &--bfmv {
+    background-image: linear-gradient(variables.$back2, variables.$back1);
+  }
+
+  &--churrasco {
+    background-image: linear-gradient(variables.$back1, variables.$back2);
+  }
+
+  h2 {
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &__details {
+    display: flex;
+
+    &__title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 16px;
+    }
+
+    &__description {
+      line-height: 22px;
+      text-align: justify;
+    }
+
+    &__image {
+      max-width: 360px;
+      margin-left: 40px;
+      border-radius: 8px;
+      border: solid 1px variables.$textColor1;
+    }
+  }
+
+  @media (max-width: 640px) {
+    h2 {
+      font-size: 1.6em;
+    }
+
+    &__details {
+      display: block;
+      margin-right: 0;
+      margin-bottom: 0px;
+
+      h3 {
+        text-align: center;
+        margin-top: 0;
+      }
+
+      &__image {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
+}

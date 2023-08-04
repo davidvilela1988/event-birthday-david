@@ -1,0 +1,80 @@
+@use "variables";
+
+.hero {
+  padding-top: 64px;
+  padding-bottom: 100px;
+  background-image: url(../Images/churrasco.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  .container {
+    position: relative;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: variables.$back1;
+    content: "";
+    opacity: 0.7;
+  }
+
+  &__title {
+    margin-top: 64px;
+    margin-bottom: 64px;
+    font-size: 60px;
+    line-height: 56px;
+    color: variables.$textColor2;
+    -webkit-text-stroke: 1px variables.$textColor1;
+    text-stroke: 1px variables.$textColor1;
+    text-align: center;
+    font-weight: 800;
+  }
+
+  &__text {
+    margin-top: 64px;
+    margin-bottom: 64px;
+    padding: 20px 20px;
+    font-size: 50px;
+    line-height: 56px;
+    color: variables.$textColor1;
+    border: solid 1px variables.$textColor1;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 800;
+  }
+
+  &__logo {
+    margin: 0 auto;
+    height: 180px;
+    display: block;
+    border: solid 2px variables.$textColor1;
+    border-radius: 8px;
+  }
+
+  @media (max-width: 640px) {
+    padding: 40px 0;
+
+    &__logo {
+      height: 100px;
+    }
+
+    &__title {
+      font-size: 22px;
+      color: variables.$button;
+      -webkit-text-stroke: 0.5px variables.$textColor1;
+      text-stroke: 0.5px variables.$textColor1;
+      margin: 24px 0;
+    }
+
+    &__text {
+      font-size: 22px;
+      line-height: 24px;
+      margin: 24px 0;
+    }
+  }
+}
